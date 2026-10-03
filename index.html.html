@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Riddhi Bhatt | Portfolio</title>
+<style>
+:root{--maroon-dark:#3e1420;--maroon:#8c3346;--maroon-light:#d9a3ac;--gold:#c9a876;
+  --cream:#faf3f0;--ink:#2a1216;--mute:#6f5a5e;--line:#e9dcd9}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,Arial,sans-serif;background:var(--cream);color:var(--ink)}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;
+  padding:16px 24px;background:rgba(250,243,240,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav b{letter-spacing:3px;font-size:14px}
+nav .links{display:flex;gap:18px;font-size:13px}
+nav .links a{text-decoration:none;color:var(--mute)}
+nav .links a:hover{color:var(--maroon)}
+
+section{max-width:860px;margin:0 auto;padding:70px 24px}
+section h2{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+section h3{font-size:clamp(24px,4vw,32px);margin:0 0 20px;font-weight:700;color:var(--maroon-dark)}
+
+.hero{background:var(--maroon-dark);color:#f3e6e2;text-align:center;padding:90px 24px 70px}
+.hero .ph{width:150px;height:150px;border-radius:50%;margin:0 auto 24px;border:2px dashed rgba(255,255,255,.4);
+  display:flex;align-items:center;justify-content:center;font-size:12px;color:#d9bfc1;text-align:center;padding:10px}
+.hero h1{font-size:clamp(34px,6vw,54px);margin:0 0 10px;font-weight:800}
+.hero p{color:#e3cfd0;font-size:15px;max-width:480px;margin:0 auto}
+
+.about p{font-size:15px;line-height:1.8;color:var(--ink);max-width:640px}
+
+.skills{background:#fff}
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.skillcat{border:1px solid var(--line);border-radius:16px;padding:18px}
+.skillcat b{display:block;font-size:13px;color:var(--maroon-dark);margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--ink)}
+
+.projects .card{display:grid;grid-template-columns:1fr 1.3fr;gap:24px;align-items:center;
+  border:1px solid var(--line);border-radius:20px;padding:20px;margin-bottom:24px;background:#fff}
+.ph-img{aspect-ratio:4/3;border-radius:14px;border:2px dashed var(--maroon-light);
+  display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--mute);text-align:center;padding:10px;
+  background:var(--cream)}
+.card h4{margin:0 0 6px;font-size:18px;color:var(--maroon-dark)}
+.card p{font-size:14px;color:var(--mute);line-height:1.6;margin:0 0 10px}
+.card .tags{margin-bottom:0}
+.coming{border:2px dashed var(--line);border-radius:20px;padding:30px;text-align:center;color:var(--mute);font-size:14px}
+
+.edu{background:#fff}
+.edu-item{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.edu-item:last-child{border-bottom:0}
+.edu-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);margin-top:6px;flex-shrink:0}
+.edu-item b{display:block;color:var(--maroon-dark);font-size:15px}
+.edu-item span{font-size:13px;color:var(--mute)}
+
+footer{background:var(--maroon-dark);color:#e3cfd0;text-align:center;padding:60px 24px}
+footer h3{color:#fff}
+footer a.btn{display:inline-block;background:var(--gold);color:var(--maroon-dark);border-radius:999px;
+  padding:12px 26px;font-size:14px;font-weight:700;text-decoration:none;margin-top:16px}
+footer .note{font-size:12px;color:#b4898d;margin-top:30px}
+
+@media(max-width:640px){.projects .card{grid-template-columns:1fr}}
+</style></head><body>
+
+<nav><b>RIDDHI BHATT</b>
+  <div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</nav>
+
+<section class="hero">
+  <img src="images/me.jpg" alt="Riddhi Bhatt" style="width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 20%;margin:0 auto 24px;display:block;border:3px solid rgba(255,255,255,.2)">
+  <h1>Riddhi Bhatt</h1>
+  <p>Data science &amp; AI enthusiast — building things at the intersection of data and decision-making.</p>
+</section>
+
+<section class="about" id="about">
+  <h2>About</h2>
+  <h3>A little about me</h3>
+  <p> Final-year Integrated MCA student with a BCA background, currently pursuing an
+  MSc in Data Science and AI alongside. I like building projects that combine multiple parts of the ML stack —
+  computer vision, retrieval, and language models — into something a person can actually use, not just a
+  notebook. I like thinking cognitively and while it is an issue in my personal life, I can ace professionally with it and I intend to do so. I am told that I have good communication power and I thrive under pressure. This page grows as I build more.</p>
+</section>
+
+<section class="skills" id="skills">
+  <h2>Skills</h2>
+  <h3>What I work with</h3>
+  <div class="skillgrid">
+    <div class="skillcat"><b>Languages &amp; Tools</b><div class="tags">
+      <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Git/GitHub</span>
+    </div></div>
+    <div class="skillcat"><b>Machine Learning</b><div class="tags">
+      <span class="tag">scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">CNNs</span>
+    </div></div>
+    <div class="skillcat"><b>NLP &amp; LLM Engineering</b><div class="tags">
+      <span class="tag">NLP</span><span class="tag">RAG</span><span class="tag">LangChain/LangGraph/LangSmith</span>
+      <span class="tag">Hugging Face</span><span class="tag">Agentic AI</span><span class="tag">LLM APIs</span>
+      <span class="tag">Prompt Engineering</span><span class="tag">Word2Vec</span>
+    </div></div>
+    <div class="skillcat"><b>Backend &amp; Deployment</b><div class="tags">
+      <span class="tag">FastAPI</span><span class="tag">Django</span><span class="tag">Docker</span><span class="tag">Vector DBs (ChromaDB)</span>
+    </div></div>
+    <div class="skillcat"><b>Visualization</b><div class="tags">
+      <span class="tag">Tableau</span><span class="tag">Power BI</span>
+    </div></div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <h2>Projects</h2>
+  <h3>Things I've built</h3>
+
+  <div class="card">
+    <img src="images/FASHION-WISE.png" alt="Fashion-wise" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-radius:14px">
+    <div>
+      <h4>Fashion-wise</h4>
+      <p>A CNN + RAG + chatbot styling app. A CNN classifies a clothing photo, RAG retrieves grounded
+      styling guidance, and a chatbot turns it into conversational advice — with wardrobe matching and
+      shop links.</p>
+      <div class="tags"><span class="tag">TensorFlow</span><span class="tag">RAG</span><span class="tag">FastAPI</span><span class="tag">Claude / Ollama</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/VITANEXUS.PNG" alt="Vitanexus" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px">
+    <div>
+      <h4>Vitanexus</h4>
+      <p>A Django-based disease prediction and virtual clinic platform — built as my internship capstone.
+      Enter symptoms, get a probable diagnosis via a sklearn-based DiseasePredictor, and connect to a
+      relevant specialist. Covers 41 diseases across 132 symptoms, with role-based access for patients
+      and doctors.</p>
+      <div class="tags"><span class="tag">Django</span><span class="tag">scikit-learn</span><span class="tag">Role-based Access</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ph-img">In progress — screenshot coming</div>
+    <div>
+      <h4>Chatbot <span class="tag" style="margin-left:6px">In progress</span></h4>
+      <p>[Details to come — tell me what this one does and I'll fill this in.]</p>
+      <div class="tags"></div>
+    </div>
+  </div>
+
+  <div class="coming">+ More projects coming soon</div>
+</section>
+
+<section class="edu" id="education">
+  <h2>Education</h2>
+  <h3>Background</h3>
+  <div class="edu-item"><div class="edu-dot"></div><div>
+    <b>MSc Data Science — BITS Pilani</b><span>Expected 2028–29</span>
+  </div></div>
+  <div class="edu-item"><div class="edu-dot"></div><div>
+    <b>Integrated MCA (BCA background) — Indus University, Ahmedabad</b><span>Graduating 2026 · CGPA 9.54</span>
+  </div></div>
+</section>
+
+<footer id="contact">
+  <h3>Let's connect</h3>
+  <p>Open to entry-level data analytics, data science, and BI roles.</p>
+  <a class="btn" href="mailto:riddhiii.works@gmail.com">riddhiii.works@gmail.com</a>
+  <div class="note">[Add LinkedIn / GitHub links here]</div>
+</footer>
+
+</body></html>
