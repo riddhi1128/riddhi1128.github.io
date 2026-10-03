@@ -56,7 +56,206 @@ footer a.btn{display:inline-block;background:var(--gold);color:var(--maroon-dark
   padding:12px 26px;font-size:14px;font-weight:700;text-decoration:none;margin-top:16px}
 footer .note{font-size:12px;color:#b4898d;margin-top:30px}
 
-@media(max-width:640px){.projects .card{grid-template-columns:1fr}}
+/* TABLET */
+@media (max-width: 900px) {
+  section {
+    padding: 55px 28px;
+  }
+
+  .hero {
+    padding: 75px 28px 60px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .projects .card {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 18px;
+  }
+
+  .skillgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 640px) {
+
+  nav {
+    padding: 14px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav b {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  nav .links {
+    width: 100%;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  section {
+    padding: 48px 18px;
+  }
+
+  section h2 {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  section h3 {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  /* HERO */
+
+  .hero {
+    padding: 65px 18px 55px;
+  }
+
+  .hero img {
+    width: 125px !important;
+    height: 125px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 330px;
+  }
+
+  /* ABOUT */
+
+  .about p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* SKILLS */
+
+  .skillgrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .skillcat {
+    padding: 16px;
+  }
+
+  /* PROJECTS */
+
+  .projects .card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 16px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+  }
+
+  .projects .card img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+  }
+
+  .card h4 {
+    font-size: 17px;
+  }
+
+  .card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 4px 9px;
+  }
+
+  .coming {
+    padding: 24px 18px;
+    font-size: 13px;
+  }
+
+  /* EDUCATION */
+
+  .edu-item {
+    gap: 12px;
+  }
+
+  .edu-item b {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .edu-item span {
+    font-size: 12px;
+  }
+
+  /* FOOTER */
+
+  footer {
+    padding: 48px 18px;
+  }
+
+  footer h3 {
+    font-size: 25px;
+  }
+
+  footer p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer a.btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 18px auto 0;
+    padding: 13px 18px;
+  }
+}
+
+
+/* VERY SMALL PHONES */
+@media (max-width: 380px) {
+
+  nav .links {
+    gap: 10px;
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero img {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 </style></head><body>
 
 <nav><b>RIDDHI BHATT</b>
@@ -109,7 +308,7 @@ footer .note{font-size:12px;color:#b4898d;margin-top:30px}
   <h3>Things I've built</h3>
 
   <div class="card">
-    <img src="FASHION-WISE.png" alt="Fashion-wise" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-radius:14px">
+    <img src="FASHION-WISE.png" alt="Fashion-wise" style="width:100%;border-radius:14px;display:block">
     <div>
       <h4>Fashion-wise</h4>
       <p>A CNN + RAG + chatbot styling app. A CNN classifies a clothing photo, RAG retrieves grounded
@@ -120,7 +319,7 @@ footer .note{font-size:12px;color:#b4898d;margin-top:30px}
   </div>
 
   <div class="card">
-    <img src="VITANEXUS.PNG" alt="Vitanexus" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px">
+    <img src="VITANEXUS.PNG" alt="Vitanexus" style="width:100%;border-radius:14px;display:block">
     <div>
       <h4>Vitanexus</h4>
       <p>A Django-based disease prediction and virtual clinic platform — built as my internship capstone.
