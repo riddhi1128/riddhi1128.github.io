@@ -304,10 +304,14 @@ footer .contact-links a:hover{
 }
 
 .project-tile .project-flow{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
+  display:none;
+  grid-template-columns:repeat(4,1fr);
   gap:8px;
   margin-top:16px;
+}
+
+.project-tile.active .project-flow{
+  display:grid;
 }
 
 .project-flow span{
@@ -663,38 +667,21 @@ footer .contact-links a:hover{
         <span>LLM Generation</span>
       </div>
 
-      <span class="project-hint">Click to view data science flow</span>
-
       <div class="project-details">
         <strong>Data science flow</strong><br><br>
         <strong>1. Input:</strong> A clothing image is provided as the model input.<br>
-        <strong>2. Computer Vision:</strong> A CNN performs image classification to identify clothing attributes or category.<br>
-        <strong>3. Retrieval:</strong> Relevant styling information is retrieved from a knowledge base using RAG.<br>
-        <strong>4. Generation:</strong> The retrieved context is passed to an LLM to generate grounded styling recommendations.<br>
-        <strong>5. Application Layer:</strong> FastAPI connects the ML/LLM pipeline to the user-facing application.
+        <strong>2. Computer Vision:</strong> A CNN classifies the clothing image.<br>
+        <strong>3. Retrieval:</strong> RAG retrieves relevant styling knowledge from the knowledge base.<br>
+        <strong>4. Generation:</strong> An LLM uses the retrieved context to generate grounded recommendations.<br>
+        <strong>5. Application:</strong> FastAPI connects the ML and LLM pipeline to the application.
       </div>
 
       <div class="tags" style="margin-top:12px">
-        <span class="tag">TensorFlow</span><span class="tag">CNN</span>
-        <span class="tag">RAG</span><span class="tag">FastAPI</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">CNN</span>
+        <span class="tag">RAG</span>
+        <span class="tag">FastAPI</span>
         <span class="tag">LLM</span>
-      </div>
-    </div>
-  </div>
-
-      <span class="project-hint">Click to view project flow</span>
-
-      <div class="project-details">
-        <strong>How it works:</strong><br>
-        A clothing photo is classified using a CNN. The result is passed into
-        a retrieval layer for grounded styling guidance, then a chatbot turns
-        the recommendations into conversational advice with wardrobe matching
-        and shop links.
-      </div>
-
-      <div class="tags" style="margin-top:12px">
-        <span class="tag">TensorFlow</span><span class="tag">RAG</span>
-        <span class="tag">FastAPI</span><span class="tag">Claude / Ollama</span>
       </div>
     </div>
   </div>
@@ -715,36 +702,19 @@ footer .contact-links a:hover{
         <span>Specialist</span>
       </div>
 
-      <span class="project-hint">Click to view data science flow</span>
-
       <div class="project-details">
         <strong>Data science flow</strong><br><br>
         <strong>1. Input:</strong> The user provides a set of symptoms.<br>
-        <strong>2. Preprocessing:</strong> Symptoms are mapped into the feature representation expected by the trained model.<br>
-        <strong>3. Prediction:</strong> A scikit-learn DiseasePredictor produces a probable disease classification.<br>
+        <strong>2. Preprocessing:</strong> Symptoms are converted into the feature representation required by the model.<br>
+        <strong>3. Prediction:</strong> A scikit-learn DiseasePredictor performs disease classification.<br>
         <strong>4. Application:</strong> Django handles the prediction workflow and role-based access.<br>
         <strong>5. Output:</strong> The predicted condition is used to connect the patient with a relevant specialist.
       </div>
 
       <div class="tags" style="margin-top:12px">
-        <span class="tag">Django</span><span class="tag">scikit-learn</span>
-        <span class="tag">Classification</span><span class="tag">Role-based Access</span>
-      </div>
-    </div>
-  </div>
-
-      <span class="project-hint">Click to view project flow</span>
-
-      <div class="project-details">
-        <strong>How it works:</strong><br>
-        A user enters symptoms, the sklearn-based DiseasePredictor generates
-        a probable diagnosis, and the platform connects the user with a
-        relevant specialist. The system includes role-based access for
-        patients and doctors and covers 41 diseases across 132 symptoms.
-      </div>
-
-      <div class="tags" style="margin-top:12px">
-        <span class="tag">Django</span><span class="tag">scikit-learn</span>
+        <span class="tag">Django</span>
+        <span class="tag">scikit-learn</span>
+        <span class="tag">Classification</span>
         <span class="tag">Role-based Access</span>
       </div>
     </div>
@@ -754,8 +724,7 @@ footer .contact-links a:hover{
     <div class="ph-img">In progress — screenshot coming</div>
     <div>
       <h4>Chatbot <span class="tag" style="margin-left:6px">In progress</span></h4>
-      <p>[Details to come — tell me what this one does and I'll fill this in.]</p>
-      <div class="tags"></div>
+      <p>Details coming soon.</p>
     </div>
   </div>
 
