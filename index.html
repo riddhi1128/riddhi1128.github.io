@@ -588,7 +588,7 @@ footer .contact-links a:hover{
   <h3>About</h3>
   <h2>A little about me</h2>
   <p>
-    An Integrated-MCA graduate with a BCA background, currently pursuing an
+    Final-year Integrated MCA student with a BCA background, currently pursuing an
     MSc in Data Science and AI alongside. I like building projects that combine multiple parts of the ML stack —
     computer vision, retrieval, and language models — into something a person can actually use, not just a
     notebook. I like thinking cognitively and while it is an issue in my personal life, I can ace professionally
@@ -607,7 +607,7 @@ footer .contact-links a:hover{
       <div class="tags">
         <span class="tag">Python</span><span class="tag">SQL</span>
         <span class="tag">Pandas</span><span class="tag">NumPy</span>
-        <span class="tag">Git/GitHub</span>
+        <span class="tag">Git/GitHub</span><span class="tag">JavaScript</span>
       </div>
     </div>
 
@@ -626,7 +626,10 @@ footer .contact-links a:hover{
         <span class="tag">LangChain/LangGraph/LangSmith</span>
         <span class="tag">Hugging Face</span><span class="tag">Agentic AI</span>
         <span class="tag">LLM APIs</span><span class="tag">Prompt Engineering</span>
-        <span class="tag">Word2Vec</span>
+        <span class="tag">Word2Vec</span><span class="tag">n8n</span>
+        <span class="tag">Vapi</span><span class="tag">AI Architechture</span>
+        <span class="tag">Voice AI Agents</span><span class="tag">Tool / Function Calling</span>
+        <span class="tag">Structured LLM Output (JSON Schema)</span><span class="tag">Google Gemini</span>
       </div>
     </div>
 
@@ -635,6 +638,9 @@ footer .contact-links a:hover{
       <div class="tags">
         <span class="tag">FastAPI</span><span class="tag">Django</span>
         <span class="tag">Docker</span><span class="tag">Vector DBs (ChromaDB)</span>
+        <span class="tag">Workflow Automation</span><span class="tag">Webhooks &amp; REST APIs</span>
+        <span class="tag">Webhook Authentication</span><span class="tag">Google Workspace APIs</span>
+        <span class="tag">Error Handling &amp; Retries</span>
       </div>
     </div>
 
@@ -716,6 +722,43 @@ footer .contact-links a:hover{
         <span class="tag">scikit-learn</span>
         <span class="tag">Classification</span>
         <span class="tag">Role-based Access</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card project-tile" onclick="toggleProject(this)">
+    <img src="MASTERY-DESK.png" alt="Mastery Desk">
+    <div>
+      <h4>Mastery Desk</h4>
+      <p>
+        A two-agent voice AI system: a Vapi voice agent takes a phone call, and an n8n workflow
+        logs the caller, books a session, and emails a personalised AI-written learning plan.
+      </p>
+
+      <div class="project-flow">
+        <span>Voice Call (Vapi)</span>
+        <span>Authenticated Webhook</span>
+        <span>Sheets + Calendar</span>
+        <span>Gemini Plan + Email</span>
+      </div>
+
+      <div class="project-details">
+        <strong>Data science flow</strong><br><br>
+        <strong>1. Voice agent:</strong> A Vapi agent (speech-to-text, GPT-4.1, text-to-speech) collects the caller's skill, level, weekly hours, time slot and a confirmed email.<br>
+        <strong>2. Tool call:</strong> The agent calls a function tool that sends the details to an n8n webhook secured with header authentication.<br>
+        <strong>3. Log and book:</strong> A code step unpacks the payload, the caller is logged to Google Sheets, and a 30-minute session is booked on Google Calendar.<br>
+        <strong>4. Fast reply:</strong> The workflow replies to Vapi before the slow AI step, so the call never times out.<br>
+        <strong>5. Plan generation:</strong> Gemini writes a four-week plan with three free resources as structured JSON, enforced by an output parser.<br>
+        <strong>6. Delivery:</strong> A code step builds an HTML email and Gmail sends it. Retries and an error-alert workflow keep it reliable.
+      </div>
+
+      <div class="tags" style="margin-top:12px">
+        <span class="tag">Vapi</span>
+        <span class="tag">n8n</span>
+        <span class="tag">Gemini</span>
+        <span class="tag">Webhooks</span>
+        <span class="tag">Structured Output</span>
+        <span class="tag">Google APIs</span>
       </div>
     </div>
   </div>
