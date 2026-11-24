@@ -379,6 +379,40 @@
       cursor: pointer;
     }
 
+    /* POWER BI PROJECT GALLERY */
+    .pbi-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .pbi-thumb {
+      display: block;
+      cursor: zoom-in;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      background: #fff;
+    }
+
+    .projects .card .pbi-thumb img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      border-radius: 0;
+      display: block;
+    }
+
+    .pbi-thumb span {
+      display: block;
+      padding: 6px 8px;
+      font-size: 11px;
+      color: var(--maroon-dark);
+      text-align: center;
+    }
+
     /* FOOTER */
     footer {
       background: var(--maroon-dark);
@@ -951,7 +985,65 @@
         </div>
       </div>
     </div>
-    
+
+    <div class="card project-tile" onclick="toggleProject(this)">
+      <img src="powerbi-executive-overview.png" alt="Power BI retail dashboard: executive overview">
+      <div>
+        <h4>PowerBI Project</h4>
+        <p>
+          A four-page interactive Power BI dashboard analyzing retail sales and profitability for 2024&ndash;2026,
+          from an executive overview to discount risk and subcategory performance.
+        </p>
+
+        <div class="project-flow">
+          <span>Executive Overview</span>
+          <span>Product Performance</span>
+          <span>Discounts &amp; Decisions</span>
+          <span>Product Deep Dive</span>
+        </div>
+
+        <div class="project-details">
+          <strong>Dashboard walkthrough</strong><br><br>
+          <strong>1. Executive Overview:</strong> Sales, profit, orders and profit margin cards, with sales and profit by
+          region, a monthly sales trend and a Year filter.<br>
+          <strong>2. Product Performance:</strong> Sales and profit margin by category, sales mix by year, and a
+          Customer Segment filter.<br>
+          <strong>3. Discounts &amp; Decisions:</strong> Total discounts, loss orders and loss order rate, with sales and
+          margin by discount band and discount against order profit.<br>
+          <strong>4. Product Deep Dive:</strong> Subcategory sales and profit, a portfolio treemap, and sales against
+          profitability by subcategory.<br><br>
+          <strong>Key insight:</strong> Technology contributes 78.28% of sales, but Office Supplies has the highest
+          aggregate profit margin (22.01% against 15.75% for Technology).
+
+          <div class="pbi-gallery">
+            <a class="pbi-thumb" href="powerbi-executive-overview.png" data-title="Power BI project: Executive Overview">
+              <img src="powerbi-executive-overview.png" alt="Executive Overview page" loading="lazy">
+              <span>Executive Overview</span>
+            </a>
+            <a class="pbi-thumb" href="powerbi-product-performance.png" data-title="Power BI project: Product Performance">
+              <img src="powerbi-product-performance.png" alt="Product Performance page" loading="lazy">
+              <span>Product Performance</span>
+            </a>
+            <a class="pbi-thumb" href="powerbi-discounts-decisions.png" data-title="Power BI project: Discounts &amp; Decisions">
+              <img src="powerbi-discounts-decisions.png" alt="Discounts and Decisions page" loading="lazy">
+              <span>Discounts &amp; Decisions</span>
+            </a>
+            <a class="pbi-thumb" href="powerbi-product-deep-dive.png" data-title="Power BI project: Product Deep Dive">
+              <img src="powerbi-product-deep-dive.png" alt="Product Deep Dive page" loading="lazy">
+              <span>Product Deep Dive</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="tags" style="margin-top:12px">
+          <span class="tag">Power BI</span>
+          <span class="tag">DAX</span>
+          <span class="tag">Data Visualization</span>
+          <span class="tag">Dashboard Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="edu" id="education">
     <h3>Education</h3>
@@ -980,7 +1072,7 @@
 
     <div class="cert-grid">
       <div class="cert-card">
-        <a class="cert-thumb" href="C:\Users\admin\OneDrive\Desktop\PORTFOLIO\images\ibm-generative-ai.png.png" data-title="Generative AI: Introduction and Applications — IBM · Coursera" aria-label="View certificate: Generative AI: Introduction and Applications">
+        <a class="cert-thumb" href="ibm-generative-ai.png" data-title="Generative AI: Introduction and Applications — IBM · Coursera" aria-label="View certificate: Generative AI: Introduction and Applications">
           <img src="ibm-generative-ai.png" alt="Certificate: Generative AI: Introduction and Applications" loading="lazy">
         </a>
         <h4>Generative AI: Introduction and Applications</h4>
@@ -989,7 +1081,7 @@
       </div>
 
       <div class="cert-card">
-        <a class="cert-thumb" href="C:\Users\admin\OneDrive\Desktop\PORTFOLIO\images\tata-genai-data-analytics.png.png" data-title="GenAI Powered Data Analytics Job Simulation — Tata · Forage" aria-label="View certificate: GenAI Powered Data Analytics Job Simulation">
+        <a class="cert-thumb" href="tata-genai-data-analytics.png" data-title="GenAI Powered Data Analytics Job Simulation — Tata · Forage" aria-label="View certificate: GenAI Powered Data Analytics Job Simulation">
           <img src="tata-genai-data-analytics.png" alt="Certificate: GenAI Powered Data Analytics Job Simulation" loading="lazy">
         </a>
         <h4>GenAI Powered Data Analytics Job Simulation</h4>
@@ -998,7 +1090,7 @@
       </div>
 
       <div class="cert-card">
-        <a class="cert-thumb" href="C:\Users\admin\OneDrive\Desktop\PORTFOLIO\images\deloitte_data_analytics.png.png" data-title="Data Analytics Job Simulation — Deloitte Australia · Forage" aria-label="View certificate: Data Analytics Job Simulation">
+        <a class="cert-thumb" href="deloitte-data-analytics.png" data-title="Data Analytics Job Simulation — Deloitte Australia · Forage" aria-label="View certificate: Data Analytics Job Simulation">
           <img src="deloitte-data-analytics.png" alt="Certificate: Data Analytics Job Simulation" loading="lazy">
         </a>
         <h4>Data Analytics Job Simulation</h4>
@@ -1007,7 +1099,7 @@
       </div>
 
       <div class="cert-card">
-        <a class="cert-thumb" href="C:\Users\admin\OneDrive\Desktop\PORTFOLIO\images\tata-data-visualisation.png.png" data-title="Data Visualisation: Empowering Business with Effective Insights — Tata · Forage" aria-label="View certificate: Data Visualisation: Empowering Business with Effective Insights">
+        <a class="cert-thumb" href="tata-data-visualisation.png" data-title="Data Visualisation: Empowering Business with Effective Insights — Tata · Forage" aria-label="View certificate: Data Visualisation: Empowering Business with Effective Insights">
           <img src="tata-data-visualisation.png" alt="Certificate: Data Visualisation: Empowering Business with Effective Insights" loading="lazy">
         </a>
         <h4>Data Visualisation: Empowering Business with Effective Insights</h4>
@@ -1040,10 +1132,10 @@
       card.classList.toggle("active");
 
       const hint = card.querySelector(".project-hint");
-      if (card.classList.contains("active")) {
-        hint.textContent = "Click to hide project flow";
-      } else {
-        hint.textContent = "Click to view project flow";
+      if (hint) {
+        hint.textContent = card.classList.contains("active")
+          ? "Click to hide project flow"
+          : "Click to view project flow";
       }
     }
 
@@ -1058,9 +1150,10 @@
         img.src = "";
       }
 
-      document.querySelectorAll(".cert-thumb").forEach(function (a) {
+      document.querySelectorAll(".cert-thumb, .pbi-thumb").forEach(function (a) {
         a.addEventListener("click", function (e) {
           e.preventDefault();
+          e.stopPropagation();
           img.src = a.getAttribute("href");
           img.alt = a.getAttribute("data-title");
           cap.textContent = a.getAttribute("data-title");
