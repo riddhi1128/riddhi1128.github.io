@@ -413,6 +413,63 @@
       text-align: center;
     }
 
+    /* EXPERIENCE */
+    .exp-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 28px;
+      align-items: start;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .exp-thumb {
+      display: block;
+      cursor: zoom-in;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .exp-thumb img {
+      width: 100%;
+      display: block;
+    }
+
+    .exp-card h4 {
+      margin: 0 0 4px;
+      font-size: 18px;
+      color: var(--maroon-dark);
+    }
+
+    .exp-card .exp-meta {
+      font-size: 13px;
+      color: var(--mute);
+      margin: 0 0 12px;
+    }
+
+    .exp-card p {
+      font-size: 14px;
+      color: var(--mute);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media(max-width:640px) {
+      .exp-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px;
+        border-radius: 16px;
+      }
+
+      .exp-thumb {
+        max-width: 220px;
+      }
+    }
+
     /* FOOTER */
     footer {
       background: var(--maroon-dark);
@@ -754,6 +811,7 @@
     <div class="links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#certifications">Certifications</a>
@@ -832,6 +890,28 @@
         <div class="tags">
           <span class="tag">Tableau</span><span class="tag">Power BI</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <h3>Experience</h3>
+    <h2>Where I've interned</h2>
+
+    <div class="exp-card">
+      <a class="exp-thumb lb-link" href="sparks-to-ideas-internship-completion.png"
+        data-title="Internship Completion Certificate — Sparks To Ideas" aria-label="View internship completion certificate">
+        <img src="sparks-to-ideas-internship-completion.png" alt="Internship completion certificate from Sparks To Ideas" loading="lazy">
+      </a>
+      <div>
+        <h4>Data Science Intern</h4>
+        <div class="exp-meta">Sparks To Ideas, Ahmedabad &middot; Jan 2026 &ndash; Oct 2026</div>
+        <p>
+          Completed the Data Science Internship Program at Sparks To Ideas and was awarded
+          an internship completion certificate in October 2026.
+        </p>
+        <a class="cert-link lb-link" href="sparks-to-ideas-internship-completion.png"
+          data-title="Internship Completion Certificate — Sparks To Ideas">View completion certificate</a>
       </div>
     </div>
   </section>
@@ -1150,7 +1230,7 @@
         img.src = "";
       }
 
-      document.querySelectorAll(".cert-thumb, .pbi-thumb").forEach(function (a) {
+      document.querySelectorAll(".cert-thumb, .pbi-thumb, .lb-link").forEach(function (a) {
         a.addEventListener("click", function (e) {
           e.preventDefault();
           e.stopPropagation();
